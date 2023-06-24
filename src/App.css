@@ -1,0 +1,122 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main-content{
+  align-content: center;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.v-left{
+  padding: 0;
+  width: 1px;
+  border-right: 1px solid lightgrey;
+}
+
+.v-right{
+  padding: 0;
+  width: 1px;
+  border-left: 1px solid lightgrey;
+}
+
+.w-15{
+  width: 15%;
+}
+
+.w-30{
+  width: 30%;
+}
+
+.nav{
+  text-align: left;
+}
+
+.nav-link{
+  font-size: 1.25rem;
+}
+
+.navlink{
+  width: fit-content;
+  border-radius: 2rem;
+}
+
+.navlink:hover{
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-item{
+  padding-top: 0.75rem;
+}
+
+.sidebar{
+  background-color: aliceblue;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.avatar{
+  vertical-align: middle;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  border: 0.25rem solid aliceblue;
+}
+
+.avatar:hover{
+  opacity: 0.6;
+}
+
+h5{
+  margin-top: 1rem;
+}
+
+.nav-link{
+  font-weight: 400;
+}
+
+.active-menu{
+  font-weight: 600 !important;
+}
+
+.vote-options{
+  flex-direction: column;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
