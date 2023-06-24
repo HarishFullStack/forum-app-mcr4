@@ -1,8 +1,12 @@
 import {forumData} from "../../data/forumData";
 import { useReducer } from "react";
 import dayjs from "dayjs";
+import { useNavigate } from "react-router";
 
 export function Home(){
+
+  const navigate = useNavigate();
+
   const reducer = (state, actions) => {
     switch(actions.type){
       case "LIKE":
@@ -45,21 +49,13 @@ export function Home(){
                         <p>{post.postDescription}</p>
                         <div className="">
                             <div className="d-flex" style={{width: "90%"}}>
-                                <div className="col-md-4  d-flex justify-content-start"><img className="actions cursor-pointer" alt="comment" src={require('../../images/icons8-comment-32.png')}></img></div>
+                                <div className="col-md-4  d-flex justify-content-start"><img className="actions cursor-pointer" alt="comment" src={require('../../images/icons8-comment-32.png')} onClick={() => navigate(`/post/${post.postId}`)}></img></div>
                                 <div className="col-md-4  d-flex justify-content-center"><img className="actions cursor-pointer" alt="share"  src={require('../../images/icons8-share-32.png')}></img></div>
                                 <div className="col-md-4 d-flex justify-content-end"><img className="actions cursor-pointer" alt="bookmark"  src={post.isBookmarked ? require('../../images/bookmark-green.png') : require('../../images/bookmark-black.png')} onClick={() => dispatch({type: "BOOKMARK", value: post.postId})}></img></div>
 
                             </div>
                         </div>
                     </div></div>
-                    {/* {data.post.username === data.user.username && (location.pathname === "/home" || location.pathname.includes("/post")) && <div className="nav-item dropdown dropstart float-end">
-                        <i className="fa fa-ellipsis-h float-end cursor-pointer nav-link" data-bs-toggle="dropdown" aria-expanded="false" aria-hidden="true"></i>
-                        {<ul className="dropdown-menu">
-                            
-                            <li><a className="dropdown-item" href="#" onClick={() => handleEditPost(data.post)}>Edit</a></li>
-                            <li><a className="dropdown-item" href="#" onClick={() => data.handleDeletePost(data.post._id)}>Delete</a></li>
-                        </ul>}
-                    </div>} */}
             </div>
             )
           })}

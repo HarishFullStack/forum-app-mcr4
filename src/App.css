@@ -36,18 +36,6 @@
   cursor: pointer;
 }
 
-.v-left{
-  padding: 0;
-  width: 1px;
-  border-right: 1px solid lightgrey;
-}
-
-.v-right{
-  padding: 0;
-  width: 1px;
-  border-left: 1px solid lightgrey;
-}
-
 .w-15{
   width: 15%;
 }
@@ -77,8 +65,25 @@
   padding-top: 0.75rem;
 }
 
-.sidebar{
-  
+.back-button:hover{
+  border-radius: 50rem;
+  background-color: aliceblue;
+  cursor: pointer;
+}
+
+.row{
+  padding-top: 0.5rem;
+}
+
+.fit-content{
+  max-width: fit-content;
+}
+
+.v-right{
+  padding: 0;
+  height: 50px;
+  width: 30px;
+  border-right: 1px dashed lightgrey;
 }
 
 .avatar{

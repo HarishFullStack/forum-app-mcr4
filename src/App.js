@@ -2,7 +2,7 @@ import { NavLink, Routes, Route } from "react-router-dom";
 
 import './App.css';
 import { Home } from "./pages/Home/Home";
-import { Post } from "./pages/Post";
+import { Post } from "./pages/Post/Post";
 
 
 function App() {
